@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cube Loading</title>
+
+</head>
+<style>
+    body{
+        background-color: #2A2734;
+    }
+    .cube{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%) rotate(0deg);
+        animation: anim 4s infinite ease-out;
+        box-shadow: 0 1px 1px rgba(0,0,0,0.12),
+        0 2px 2px 0 rgba(0,0,0,0.12),
+        0 4px 4px 0 rgba(0,0,0,0.12),
+        0 8px 8px 0 rgba(0,0,0,0.12),
+        0 16px 16px 0 rgba(0,0,0,0.12);
+    }
+
+    .outercube{
+        width: 10vw;
+        height: 10vw;
+        background-color: #9B87FE;
+    }
+
+    .innerCube{
+        width: 5vw;
+        height: 5vw;
+        background-color: #C2BEDB;
+    }
+
+    .innerCube2{
+        width: 2.5vw;
+        height: 2.5vw;
+        background-color: #FFB870;
+    }
+
+    @keyframes anim {
+        0%{
+            transform: translate(-50%,-50%) rotate(0deg);
+        }
+        25%{
+            transform: translate(-50%,-50%) rotate(90deg);
+        }
+        50%{
+            transform: translate(-50%,-50%) rotate(180deg);
+        }
+        75%{
+            transform: translate(-50%,-50%) rotate(270deg);
+        }
+        100%{
+            transform: translate(-50%,-50%) rotate(360deg);
+        }
+    }
+</style>
+<body>
+    <div class="outercube cube">
+        <div class="innerCube cube">
+            <div class="innerCube2 cube">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
